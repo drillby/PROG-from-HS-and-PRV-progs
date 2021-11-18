@@ -1,0 +1,15 @@
+if(podminka) //NENI STREDNIK
+    printf("");
+
+rovnost ==
+vìtší >
+menší <
+vìtší nebo rovno >=
+menší nebo rovno <=
+Nerovnost !=
+Obecná negace !
+
+if(podminka)
+    prikaz1;
+else // NENI STREDNIK
+    prikaz2;

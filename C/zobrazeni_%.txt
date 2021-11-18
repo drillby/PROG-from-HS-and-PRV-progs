@@ -1,0 +1,5 @@
+%c zobrazí znak
+%ld long int
+%f des èíslo
+%Lf long des èíslo
+%6.2f 6 zankù 2 des místa

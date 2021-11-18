@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Databaze_Python.iml" filepath="$PROJECT_DIR$/.idea/Databaze_Python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../VP_INSERT_Python/.idea/insert.iml" filepath="$PROJECT_DIR$/../VP_INSERT_Python/.idea/insert.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/pythonProject/.idea/pythonProject.iml" filepath="$USER_HOME$/PycharmProjects/pythonProject/.idea/pythonProject.iml" />
+    </modules>
+  </component>
+</project>
