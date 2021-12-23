@@ -17,10 +17,10 @@ kladne = "ZADEJ KLADNÉ ČÍSLO!"
 index = 0
 
 mydb = mysql.connector.connect(
-    host="dbs.spskladno.cz",
-    user="student14",
-    password="spsnet",
-    database="vyuka14"
+    host="",
+    user="",
+    password="",
+    database=""
 )
 mycursor = mydb.cursor()
 

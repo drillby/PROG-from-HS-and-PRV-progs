@@ -13,10 +13,10 @@ rozsah = "ZADEJTE PLATNÝ PŘÍKAZ!"
 chyba = "PŘÍKAZ V TAKOVÉTO FORMĚ NEMŮŽE EXISTOVAT!"
 
 mydb = mysql.connector.connect(
-    host="dbs.spskladno.cz",
-    user="student14",
-    password="spsnet",
-    database="vyuka14"
+    host="",
+    user="",
+    password="",
+    database=""
 )
 mycursor = mydb.cursor()
 

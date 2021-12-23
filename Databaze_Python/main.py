@@ -1,10 +1,10 @@
 import mysql.connector
 
 mydb = mysql.connector.connect(
-    host="dbs.spskladno.cz",
-    user="student14",
-    password="spsnet",
-    database="vyuka14"except mysql.connector.Error as err: #errory
+    host="",
+    user="",
+    password="",
+    database=""except mysql.connector.Error as err: #errory
     print(err)
     print("Error Code:", err.errno)
     print("SQLSTATE:", err.sqlstate)

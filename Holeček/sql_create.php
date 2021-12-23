@@ -1,8 +1,8 @@
 <?php
-$servername = "dbs.spskladno.cz"; // přihlašovací údaje
-$username = "student14";
-$password = "spsnet";
-$database = "vyuka14";
+$servername = ""; // přihlašovací údaje
+$username = "";
+$password = "";
+$database = "";
 
 try //zachytávání chyb
 {
@@ -18,13 +18,10 @@ try //zachytávání chyb
 			prijmeni char(20) NOT NULL
 		)"; // proměnná do který nahraješ SQL kód
 		$conn->exec($sql); // příkaz na provedení SQL kódu*/
-		echo "Tabulka vytvořena";
-} 
-
-catch(PDOException $e) // při chybe vypíše error podle SQL 
-	{
+	echo "Tabulka vytvořena";
+} catch (PDOException $e) // při chybe vypíše error podle SQL 
+{
 	echo $sql . "<br>" . $e->getMessage();
-	}
+}
 
 $conn = NULL; // odhlášení
-?>
