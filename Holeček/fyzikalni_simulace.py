@@ -8,7 +8,7 @@ CERNA = (0, 0, 0)
 CERVENA = (255, 0, 0)
 
 GRAVITACE = 1
-ODPOR = 0.02
+# ODPOR = 0.02
 
 zrychleni_x = 0
 
@@ -29,20 +29,14 @@ class Micek():
             self.hmotnost = 5
 
     def posun_se(self):
-        self.pozice[0] = self.pozice[0] + self.rychlost[0] * \
-            doba_mezi_framy
-        # počítá pozici na x
-        self.pozice[1] = self.pozice[1] + self.rychlost[1] * \
-            doba_mezi_framy + GRAVITACE * (doba_mezi_framy**2) // 2
-        # počítá pozici na y
+        self.pozice[0] = self.pozice[0] + self.rychlost[0] # počítá pozici na x
+        self.pozice[1] = self.pozice[1] + self.rychlost[1] + GRAVITACE # počítá pozici na y
 
-        self.rychlost[0] = self.rychlost[0] - ODPOR * \
-            doba_mezi_framy  # počítá rychlost na x
-        self.rychlost[1] = self.rychlost[1] + GRAVITACE * \
-            doba_mezi_framy  # počítá rychlost na y
+        self.rychlost[0] = self.rychlost[0] # počítá rychlost na x
+        self.rychlost[1] = self.rychlost[1] + GRAVITACE  # počítá rychlost na y
 
-        if self.rychlost[0] <= 0:
-            self.rychlost[0] = 0
+        # if self.rychlost[0] <= 0:
+        #     self.rychlost[0] = 0
             # zastaví míček aby rychlost nebyla menší než 0
 
         if self.pozice[0] + self.hmotnost >= OKNO_SIRKA:
@@ -67,7 +61,6 @@ pg.init()
 
 hodiny = pg.time.Clock()
 fps = 60
-cas_predesleho_framu = pg.time.get_ticks() // 100
 
 pg.display.set_caption("Fyzikální simualce - pygame")
 okno = pg.display.set_mode((OKNO_SIRKA, OKNO_VYSKA))
@@ -89,14 +82,10 @@ while running:
         elif klavesa[pg.K_ESCAPE]:
             running = False
 
-    cas_tohoto_framu = pg.time.get_ticks() // 100
-    doba_mezi_framy = cas_tohoto_framu - cas_predesleho_framu
-
     okno.fill(CERNA)
     micek.posun_se()
     micek.vykreli()
 
-    cas_predesleho_framu = cas_tohoto_framu
     hodiny.tick(fps)
     pg.display.update()
 
